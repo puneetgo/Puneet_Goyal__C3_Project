@@ -36,7 +36,7 @@ class RestaurantServiceTest {
     public void searching_for_non_existing_restaurant_should_throw_exception() throws restaurantNotFoundException  {
     	 String restaurantName = "ABC cafe";
     	restaurantNotFoundException thrown = Assertions.assertThrows(restaurantNotFoundException.class, () -> {
-    	           //Code under test
+    	           
     		 
 
     	        LocalTime openingTime = LocalTime.parse("10:30:00");
