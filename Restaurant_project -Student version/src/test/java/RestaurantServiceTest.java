@@ -20,7 +20,7 @@ class RestaurantServiceTest {
         String restaurantName = "Test cafe";
 
         LocalTime openingTime = LocalTime.parse("10:30:00");
-        LocalTime closingTime = LocalTime.parse("22:50:00");
+        LocalTime closingTime = LocalTime.parse("22:00:00");
    
         RestaurantService test = new RestaurantService();
         test.addRestaurant (restaurantName,"Delhi",openingTime,closingTime);
@@ -34,16 +34,16 @@ class RestaurantServiceTest {
     //You may watch the video by Muthukumaran on how to write exceptions in Course 3: Testing and Version control: Optional content
     @Test
     public void searching_for_non_existing_restaurant_should_throw_exception() throws restaurantNotFoundException  {
-    	 String restaurantName = "ABC cafe";
+    	 String restaurantName = "Amelie's cafe";
     	restaurantNotFoundException thrown = Assertions.assertThrows(restaurantNotFoundException.class, () -> {
     	           
     		 
 
     	        LocalTime openingTime = LocalTime.parse("10:30:00");
-    	        LocalTime closingTime = LocalTime.parse("22:50:00");
+    	        LocalTime closingTime = LocalTime.parse("22:00:00");
     	   
     	        RestaurantService test = new RestaurantService();
-    	        test.addRestaurant (restaurantName,"Delhi",openingTime,closingTime);
+    	        test.addRestaurant (restaurantName,"Chennai",openingTime,closingTime);
     	        Restaurant nameofresturant = test.findRestaurantByName(restaurantName);
     	        nameofresturant.getName();
     	  });
